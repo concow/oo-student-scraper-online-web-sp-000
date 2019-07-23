@@ -23,9 +23,9 @@ class Scraper
   end
 
   def self.scrape_profile_page(profile_url)
-   student_profiles = {}
+   student_profiles = {}                              #declare Hash
    html = open(profile_url)
-   profile = Nokogiri::HTML(html)
+   profile = Nokogiri::HTML(html)                     #alternate way of initializing Nokogiri
 
    profile.css("div.main-wrapper.profile .social-icon-container a").each do |social_media|      #iterate over the main-wrapper/ social-icon css class fields
      if social_media.attribute("href").value.include?("twitter")                                #if the href attribute includes these values,
