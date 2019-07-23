@@ -29,7 +29,7 @@ class Scraper
 
    profile.css("div.main-wrapper.profile .social-icon-container a").each do |social_media|      #iterate over the main-wrapper/ social-icon css class fields
      if social_media.attribute("href").value.include?("twitter")                                #if the href attribute includes these values, add these to hash
-       student_profiles[:twitter] = social_media.attribute("href").value
+       student_profiles[:twitter] = social_media.attribute("href").value                        #Assign the symbol :twitter to the value of attribute
      elsif social_media.attribute("href").value.include?("linkedin")
        student_profiles[:linkedin] = social_media.attribute("href").value
      elsif social_media.attribute("href").value.include?("github")
