@@ -42,6 +42,6 @@ class Scraper
    student_profiles[:profile_quote] = profile.css("div.main-wrapper.profile .vitals-text-container .profile-quote").text
    student_profiles[:bio] = profile.css("div.main-wrapper.profile .description-holder p").text
 
-   return student_profiles
+   return student_profiles              #return our hash
   end
 end
